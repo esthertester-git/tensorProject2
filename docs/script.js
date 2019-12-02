@@ -33,6 +33,10 @@ async function run() {
   const data = new MnistData();
   await data.load();
   await showExamples(data);
+  
+  await showAccuracy(model, data);
+  await showConfusion(model, data);
+  
 }
 
 document.addEventListener('DOMContentLoaded', run);
